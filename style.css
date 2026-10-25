@@ -49,7 +49,7 @@ header {
     margin-left: auto;
 }
 
-.navbar__s3{
+.navbar__s3 {
     display: none;
 }
 
@@ -157,7 +157,9 @@ header {
 .content__inspiration {
     margin: 60px 0;
 }
-.img__card {
+
+.img__card,
+.inpiration__card {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -166,46 +168,29 @@ header {
     margin-top: 15px;
 }
 
-.img__card img {
-    border-radius: 10px;
-    width: 250px;
-    height: 220px;
-    object-fit: cover;
-    transition: 0.5s;
-}
-
-.img__card img:hover {
-    transform: scale(0.8);
-}
-
-.inpiration__card{
-    margin: 15px;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    flex: 1;
-    justify-content: space-around;
-
-}
-.place__card {
+/* Desktop Width Fix: 250px-க்கு பதில் 23% (ஒரு லைனில் 4 கார்டுகள்) */
+.img__card > div,
+.place__card,
+.inspiration__img {
+    width: 23%;
     display: flex;
     flex-direction: column;
-    position: relative;
-    cursor: pointer;
-    width: 250px;
 }
 
-.place__card img {
+.img__card img,
+.place__card img,
+.inspiration__img img {
+    border-radius: 10px;
     width: 100%;
     height: 220px;
     object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 8px;
     transition: 0.5s;
 }
 
-.place__card img:hover {
-    transform: scale(0.8);
+.img__card img:hover,
+.place__card img:hover,
+.inspiration__img img:hover {
+    transform: scale(0.95);
 }
 
 .place__card button {
@@ -216,29 +201,11 @@ header {
     font-size: 12px;
     font-weight: 600;
     margin-bottom: 6px;
+    border: 1px solid black;
 }
 
 .place__card p:last-child {
     margin-top: 2px;
-}
-
-/* --- Inspiration Card Styles --- */
-.inspiration__img {
-    cursor: pointer;
-    width: 250px;
-}
-
-.inspiration__img img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 8px;
-    transition: 0.5s;
-}
-
-.inspiration__img img:hover {
-    transform: scale(0.8);
 }
 
 .inspiration__img p {
@@ -265,7 +232,6 @@ header {
     object-fit: cover;
 }
 
-
 .donation__des {
     flex: 1;
     padding: 50px;
@@ -280,7 +246,6 @@ header {
     margin-bottom: 14px;
     color: black;
 }
-
 
 .donation__des button {
     margin-top: 15px;
@@ -312,7 +277,6 @@ header {
     justify-content: center;
 }
 
-
 .travellers__des h2 {
     font-size: 40px;
     font-weight: 800;
@@ -337,7 +301,6 @@ header {
     font-weight: 700;
     cursor: pointer;
 }
-
 
 .travellers__img {
     flex: 1;
@@ -368,32 +331,24 @@ header {
 
 .footer__column {
     flex: 1;
-    min-width: 220px; /* Ensures columns stay properly aligned on smaller screens */
+    min-width: 220px;
 }
 
 .footer__column h3 {
     font-size: 15px;
     font-weight: 700;
-    color: #000;
+    color: black;
     margin-bottom: 16px;
 }
 
 .footer__column p {
     margin-bottom: 10px;
     font-size: 14px;
-    color: #4a4a4a;
     cursor: pointer;
 }
 
-/* media Queries */
 
-@media screen and (max-width: 800px) {
-    body {
-        font-size: 10px;
-    }
-}
-
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
     header {
         flex-direction: column;
         align-items: flex-start;
@@ -463,7 +418,6 @@ header {
         font-size: 24px;
     }
 }
-
 
 @media screen and (max-width: 480px) {
     .content__search__button {
